@@ -6,12 +6,11 @@
       "type": "rust"
     },
     "poll_frontend": {
-      "dependencies": [
-        "poll_backend"
-      ],
-      "source": [
-        "src/poll_frontend/dist"
-      ],
+      "dependencies": ["poll_backend"],
+      "frontend": {
+        "entrypoint": "src/poll_frontend/dist/index.html"
+      },
+      "source": ["src/poll_frontend/assets"],
       "type": "assets",
       "workspace": "poll_frontend"
     }

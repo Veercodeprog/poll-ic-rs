@@ -1,3 +1,6 @@
 service : {
-    "greet": (text) -> (text) query;
+  get_question : () -> (text) query;
+  get_votes : () -> (vec record { text; nat64 }) query;
+  reset_votes : () -> (vec record { text; nat64 });
+  vote : (text) -> (vec record { text; nat64 });
 }
